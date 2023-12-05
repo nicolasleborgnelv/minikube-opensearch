@@ -10,7 +10,7 @@ spec:
   source:
     path: helm
     repoURL: https://github.com/nicolasleborgnelv/minikube-opensearch.git
-    targetRevision: main
+    targetRevision: master
     helm:
       valueFiles:
       - values.yaml
