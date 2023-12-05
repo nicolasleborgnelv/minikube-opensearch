@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: opensearch-dashboards
+  namespace: opensearch
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`kibana.minikube`)
+      kind: Rule
+      services:
+      - name: opensearch-dashboards
+        port: 5601
+        namespace: opensearch
