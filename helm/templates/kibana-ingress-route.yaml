@@ -12,6 +12,6 @@ spec:
     - match: Host(`kibana.minikube`)
       kind: Rule
       services:
-      - name: opensearch-dashboards
+      - name: opensearch-opensearch-dashboards
         port: 5601
         namespace: opensearch
